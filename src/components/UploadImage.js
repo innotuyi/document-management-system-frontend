@@ -17,6 +17,12 @@ function UploadImage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
+    if (!file) {
+        alert('Please select a file');
+        return;
+      }
+
     const formData = new FormData();
     formData.append("document", file);
     setLoading(true);
